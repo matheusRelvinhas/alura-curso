@@ -6,6 +6,27 @@
 }
 
 .header-nav {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.lista-footer {
+  display: flex;
+  /*flex-direction: column;
+  flex-wrap: wrap; --> flex flow faz exatamente oq as 2 linha aqui fazem*/ 
+  flex-flow: column wrap ;
+  height: 100px;
+}
+
+.footer-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px ;
 }
