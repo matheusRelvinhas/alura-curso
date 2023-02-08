@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <h1>Um pequeno passo para quem já programa, um gigantesco salto para quem esta começando.<h1>
+    <p>Este é meu primeiro programa!</p>
+</body>
+<script>
+    alert('oi');
+    document.write('<h1>Olá, mundo!</h1>');
+    document.write(10 * 20);
+    document.write('<br>');
+    document.write('10' + 10 + '<br>');
+    document.write('A média das idades é ' + (20 + 10 + 30)/3 + '.');
+    document.write('<br>' + 'Matheus nasceu em ' + (2022 - 28) + '.' + '<br>');
+    let ano = 2022;
+    document.write("Flávio tem " + (ano - 1977) + " anos");
+    document.write("<br>");
+    document.write("Joaquim tem " + (ano - 1996) + " anos");
+    document.write("<br>");
+    document.write("Barney tem " + (ano - 1976) + " anos");
+    document.write("<br>");
+    let idadeJoao = 20;
+    let idadeJoaquim = 31;
+    let idadeManoel = 49;
+    let media = (idadeJoao + idadeJoaquim + idadeManoel) / 3;
+    document.write('A média das idades é ' + Math.round(media) + ' anos.');
+
+    function pulaLinha() {
+      return document.write('<br>');
+    }
+    pulaLinha();
+    document.write('Teste pular linha');
+    pulaLinha();
+    document.write('Pulou');
+
+    function mostra(string) {
+      document.write(string);
+      pulaLinha();
+    }
+    pulaLinha();
+    mostra('Oi, tudo bem?')
+    mostra('Tudo xD')
+    //para comentar escreva "//" e dpois comentário.
+    //mostra e pulaLinha são uma função.
+</script>
+</html>

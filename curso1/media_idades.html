@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média de Idades</title>
+</head>
+<body>
+    <script>
+        function mostra(string) {
+            document.write(string + '<br>');
+        }
+         
+        let numeroFamilares = parseInt(prompt("Quantos familiares você tem?"));
+        while(isNaN(numeroFamilares)) {
+            numeroFamilares = parseInt(prompt("Quantos familiares você tem?*Digite um número!*"));
+        }
+
+        let numero = 1;
+        let totalIdades = 0;
+
+        while(numero <= numeroFamilares) {
+            let idade = parseInt(prompt("Qual idade desse familiar?"));
+            while(isNaN(idade)) {
+                idade = parseInt(prompt("Qual idade desse familiar?*Digite um número!*"));
+            }
+            totalIdades = totalIdades + idade;
+            numero++;
+        }
+
+        let mediaIdades = totalIdades/numeroFamilares
+        mostra('A média de idade da sua família é: ' + mediaIdades + '.')
+    </script>
+</body>
+</html>

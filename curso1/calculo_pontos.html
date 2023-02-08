@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cáculo de Pontos</title>
+</head>
+<body>
+    <script>
+        function mostra(string){
+            document.write(string);
+            document.write('<br>');
+        }
+        function calculoPontos (vitorias, empates) {
+            let total = (vitorias*3) + empates;
+            return mostra('O total de pontos do seu time é: ' + total + ' pontos.')
+        }
+        let vitorias = parseInt(prompt('Quantas vitórias seu time teve?'));
+        let empates = parseInt(prompt('Quantos empates seu time teve?'));
+        let pontosAnoPassado = parseInt(prompt('Quantos pontos seu time fez ano passado?'));
+        calculoPontos(vitorias, empates);
+        let total = vitorias*3 + empates
+        if (total > pontosAnoPassado) {
+            mostra('Seu time está melhor que ano passado.')
+        }
+        if (total == pontosAnoPassado) {
+            mostra('Seu time está igual ao ano passado.')
+        }
+        if (total < pontosAnoPassado) {
+            mostra('Seu time está pior que ano passado.')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Asteriscos</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write('<br>');
+        }
+
+        let linhas = parseInt(prompt("Quantas linhas?"));
+        while(isNaN(linhas)) {
+            linhas = parseInt(prompt("Quantas linhas?"));
+        }
+        let colunas = parseInt(prompt("Quantos asteriscos?"));
+        while(isNaN(colunas)) {
+            colunas = parseInt(prompt("Quantos asteriscos?"));
+        }
+
+        for (let linha = 1; linha <= linhas; linha++ ) {
+            for(let coluna = 1; coluna <= colunas; coluna++) {
+                document.write('*')
+            }
+            pulaLinha();
+        }
+
+    </script>   
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+    <script>
+        function mostra(string) {
+            document.write(string + '<br>');
+        }
+        
+        let numeroTabuada = parseInt(prompt("Qual numero você quer a tabuada?"));
+        while(isNaN(numeroTabuada)) {
+            numeroTabuada = parseInt(prompt("Qual numero você quer a tabuada?"));
+        }
+        let numeroMultiplicador = parseInt(prompt("Multiplicar até qual número?"));
+        while(isNaN(numeroMultiplicador)) {
+            numeroMultiplicador = parseInt(prompt("Multiplicar até qual número?"));
+        }
+        let multiplicador = 1;
+
+        mostra('LOOP WHILE <br>')
+
+        while(multiplicador <= numeroMultiplicador) {
+            mostra(numeroTabuada + ' x ' + multiplicador + ' = ' + (numeroTabuada * multiplicador));
+            multiplicador ++;
+        }
+
+        mostra('__________<br><br>LOOP FOR<br>')
+
+        for (let i = 1; i <= numeroMultiplicador; i++) {
+            mostra(numeroTabuada + ' x ' + i + ' = ' + (numeroTabuada * i));
+        }
+        mostra('__________<br><br>Fim.')
+    </script>
+</body>
+</html>

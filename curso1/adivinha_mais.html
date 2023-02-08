@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha Mais</title>
+</head>
+<body>
+    <input/>
+    <button>Compare com meu segredo</button>
+    <script>
+        function sorteia(n) {
+            let numerosSorteados = [];
+            let numero = 1
+            while(numero <= n) {
+                let segredo = Math.round(Math.random() * 10);
+                var igual = false;
+                if(segredo !== 0) {
+                    for (let posicao = 0; posicao < numerosSorteados.length; posicao++) {
+                        if (numerosSorteados[posicao] == segredo) {
+                            igual = true;
+                            break;
+                        }     
+                    }
+                    if (igual == false) {
+                        numerosSorteados.push(segredo);
+                        numero ++;
+                    }  
+                }
+                  
+            }
+            return numerosSorteados;
+        }
+
+        let segredos = sorteia(3);
+
+        console.log(segredos);
+
+        let input = document.querySelector('input');
+        input.focus();
+        let button = document.querySelector('button');
+
+        function click() {
+            let acertou = false;
+            for (let i = 0; i < segredos.length; i++) {
+                if(input.value == segredos[i]) {
+                alert('Você acertou!');
+                acertou = true;
+                }
+            }
+            if(acertou == false) {
+                alert('Você errou!');
+            }
+            input.value = '';
+            input.focus();
+        }
+
+        button.onclick = click;
+    </script>
+</body>
+</html>
