@@ -21,7 +21,7 @@
   /*flex-direction: column;
   flex-wrap: wrap; --> flex flow faz exatamente oq as 2 linha aqui fazem*/ 
   flex-flow: column wrap ;
-  height: 100px;
+  height: 120px;
 }
 
 .footer-container .container {
@@ -29,4 +29,14 @@
   align-items: center;
   justify-content: space-between;
   margin-right: 20px ;
+}
+
+.box {
+  width: 31.3%;
+  margin: 1%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
 }
